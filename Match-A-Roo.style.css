@@ -1,0 +1,156 @@
+/* Basic page styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F7E2F3; /* Light pink background (Sweet Roo Bou scheme) */
+    color: #68075D; /* Dark pink text (Sweet Roo Bou scheme) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.game-container {
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+h1 {
+    color: #68075D; /* Dark pink title */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.game-info {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #DA05BD; /* Bright pink button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #9D027D; /* Darker pink on hover */
+}
+
+/* Styling for the game board */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    margin-top: 20px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #EADEE9; /* Light pink background for card */
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    visibility: hidden; /* Hide image initially */
+}
+
+.card.flipped img {
+    visibility: visible; /* Show image when flipped */
+}
+
+/* Glowing effect for the Shop Now button */
+.shop-now-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #DA05BD; /* Bright pink background */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(218, 5, 189, 0.8); /* Initial glow */
+    transition: all 0.3s ease;
+}
+
+/* Glowing animation on hover */
+.shop-now-btn:hover {
+    animation: glow 1.5s ease-in-out infinite alternate;
+    box-shadow: 0 0 20px rgba(218, 5, 189, 1), 0 0 30px rgba(218, 5, 189, 0.6); /* More intense glow */
+}
+
+/* Define the glowing animation */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(218, 5, 189, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(218, 5, 189, 1), 0 0 30px rgba(218, 5, 189, 0.6);
+    }
+}
+
+/* Styling for the win message */
+.win-message {
+    background-color: #DA05BD; /* Sweet Roo Bou brand pink */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.win-message h2 {
+    font-size: 2rem;
+}
+
+.win-message p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.copy-btn, .restart-btn {
+    background-color: #68075D; /* Dark pink button */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.copy-btn:hover, .restart-btn:hover {
+    background-color: #9D027D; /* Darker pink on hover */
+}
